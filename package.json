@@ -1,0 +1,25 @@
+{
+  "name": "luxe-ladies",
+  "version": "1.0.0",
+  "description": "Luxe Ladies - Luxury Women's Fashion E-Commerce MERN Stack Application",
+  "private": true,
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "seed": "npm --prefix backend run seed",
+    "server": "npm --prefix backend start",
+    "client": "npm --prefix frontend run dev",
+    "build:client": "npm --prefix frontend run build"
+  },
+  "keywords": [
+    "mern",
+    "fashion",
+    "luxury",
+    "ecommerce",
+    "mongodb",
+    "express",
+    "react",
+    "nodejs"
+  ],
+  "author": "Luxe Ladies Haute Couture",
+  "license": "ISC"
+}

@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-[#FDFBF7] text-navy-950 font-sans antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+  }
+
+  h1, h2, h3, .font-serif {
+    font-family: 'Playfair Display', Cormorant Garamond, Georgia, serif;
+    letter-spacing: -0.015em;
+  }
+}
+
+/* Custom Luxury Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0A1128;
+}
+::-webkit-scrollbar-thumb {
+  background: #D4AF37;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #DFBA73;
+}
+
+/* Gold shimmer effect */
+.gold-shimmer {
+  background: linear-gradient(
+    90deg,
+    rgba(212, 175, 55, 0.1) 0%,
+    rgba(212, 175, 55, 0.4) 50%,
+    rgba(212, 175, 55, 0.1) 100%
+  );
+  background-size: 200% 100%;
+  animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+/* Luxury button styling */
+.btn-gold {
+  @apply relative overflow-hidden bg-gradient-to-r from-[#DFBA73] via-[#D4AF37] to-[#C5A059] text-navy-950 font-semibold px-6 py-3 rounded-none tracking-wider uppercase text-xs transition-all duration-300 shadow-md hover:shadow-gold-glow hover:brightness-105 active:scale-[0.98];
+}
+
+.btn-navy {
+  @apply relative overflow-hidden bg-navy-900 border border-gold-500/40 text-gold-200 font-semibold px-6 py-3 rounded-none tracking-wider uppercase text-xs transition-all duration-300 shadow-md hover:border-gold-500 hover:text-white hover:bg-navy-800 active:scale-[0.98];
+}
+
+.btn-outline-gold {
+  @apply relative border border-gold-500 text-gold-600 hover:text-navy-950 hover:bg-gold-500 font-medium px-5 py-2.5 rounded-none tracking-widest uppercase text-xs transition-all duration-300;
+}
